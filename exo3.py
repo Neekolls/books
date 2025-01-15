@@ -8,6 +8,7 @@ import dash_bootstrap_components as dbc
 
 # Création de l'application
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # Lire le fichier CSV en ignorant les lignes problématiques
 df = pd.read_csv("https://raw.githubusercontent.com/chriszapp/datasets/main/books.csv", on_bad_lines='skip')
